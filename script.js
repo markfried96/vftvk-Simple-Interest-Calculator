@@ -2,8 +2,9 @@ function compute()
 {
     var principal = document.getElementById("principal").value;
 
-    if(!principal){
-        alert("You need to set an amount.");
+    if(!principal || principal <= 0){
+        alert("You need to set an amount and it has to be more then zero.");
+        document.getElementById("principal").focus();
         return;
     }
     var rate = document.getElementById("rate").value;
